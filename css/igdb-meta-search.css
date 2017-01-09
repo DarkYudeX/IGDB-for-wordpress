@@ -1,0 +1,68 @@
+/* autocomplete adds the ui-autocomplete-loading class to the textbox when it is _busy_ */
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	background: white !important;
+	width: 350px;
+}
+.game-autocomplete{
+	height: 30px; 
+	width: 350px; 
+	overflow: hidden;  
+	border-bottom: 1px solid black;
+	color: black;
+
+}
+#gamelist{
+	min-height: 200px; 
+	width: 350px; 
+	overflow: auto; 
+	background: none; 
+	border: none;
+	margin-top: 10px;
+
+}
+.game-list {
+	background-color: grey;
+	color: black;
+	width: 350px;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid black;
+	height: 40px;
+	list-style-type: none;
+	cursor: move;
+	margin-bottom: 0;
+
+}
+
+.game-list:last-child{
+	border: none;
+
+}
+
+.game-list-item{
+    
+	
+}
+.game-list-name{
+	vertical-align:middle;
+	width: 80%;
+	height: 40px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	margin: 5px 0 0 5px;;
+}
+.game-list-close{
+	height:40px;
+	width: 40px;
+	float: right;
+	cursor: pointer;
+ 
+}
+.game-list-close img{
+	width: 40px;
+}
