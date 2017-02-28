@@ -29,7 +29,7 @@ Insalation is simple.
 1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 1. Visit [IGDB.com Mashape Page](https://market.mashape.com/igdbcom/internet-game-database) and request a key by registering for the site.
-1. In the settings section add the newly acquired API key and save.
+1. In the settings section under the WPIGDB add the newly acquired API key and save.
 1. When you want to add a game, just click on the IGDB.com button on your posts text editor. And search for the game you want to add, then hit select.
 
 
