@@ -1,0 +1,143 @@
+.IGDB_brand{
+    font-size: .6em;
+    float: right;
+}
+    .IGDB_brand a{
+        box-shadow: none;
+        text-decoration: none;
+        border: none;
+        float: left;
+    }
+    .IGDB_brand a:hover{
+        box-shadow: none;
+        text-decoration: none;
+        border: none;
+    }
+    .IGDB_powered{
+        float: left;
+    }
+    
+.IGDB_outerbox{
+    margin: 20px 0;
+}    
+
+.IGDB_gamebox{
+    border: 1px solid #8A8A8A;
+    
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+    .IGDB_gamebox table tr{
+        border: none;
+    }
+    
+.IGDB_boxart{
+    float: left;
+    width: 24%;
+    height: 100%;
+    line-height: 190px;
+}
+    .IGDB_gameimage{
+        width: 100%;
+        vertical-align: middle;
+        
+    }
+    
+.IGDB_gameinfo{
+    float: left;
+    width: 74%;
+    margin: 0 0 0 5px;
+}
+    .IGDB_gameinfo table,td,tr{
+        border: none;
+    }
+
+.IGDB_title{
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+    .IGDB_title a{
+        font-size: 1.1em;
+        box-shadow: none;
+        text-decoration: none;
+        border: none;
+        
+    }
+        .IGDB_title a:hover{
+            box-shadow: none;
+            text-decoration: none;
+        }
+    
+
+.IGDB_gamedetail{
+    overflow: hidden;
+    font-size: .9em;
+    margin: 0;
+    
+}
+    
+    .IGDB_label{
+        width : 30%;
+    }
+
+    .IGDB_itembox{
+        width : 70%;
+        overflow: hidden;
+    }
+        .IGDB_item{
+            float: left;
+            display:inline-block;
+        }
+        .IGDB_item:after{
+            content: ",\a0";
+        }
+        .IGDB_item:last-child:after {
+            content: "";
+        }
+        
+    
+    
+@media only screen and (max-width: 415px) {
+    .IGDB_boxart{
+        float: left;
+        width: 100%;
+        line-height: 190px;
+    }
+        .IGDB_boxart img{
+            margin: 0 15%;
+        }
+        .IGDB_gameimage{
+            width: 70%;
+            
+        }
+        
+        
+    .IGDB_brand{
+        font-size: .6em;
+        margin: 0 auto;
+        width: 75%;
+    }
+    
+    .IGDB_gameinfo{
+        width: 100%;
+        margin: 0;
+    }
+
+    .IGDB_gamedetail{
+        overflow: hidden;
+        font-size: .9em;
+        margin: 0;
+        width: 100%;
+        
+    }
+        .IGDB_label{
+            width : 40%;
+        }
+        
+        .IGDB_itembox{
+            width : 60%;
+            
+        }
+}

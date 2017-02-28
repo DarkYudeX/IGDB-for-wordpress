@@ -2,13 +2,28 @@
     /*
     Plugin Name: IGDB.com for Wordpress
     Plugin URI: http://www.drzgamer.com
-    Description: Display game information from IGDB.com(Internet Games Database) for your blog. 
+    Description: Display game information from IGDB.com(Internet Games Database) on your blog. 
     Author: Randy Grullon
     Version: 1.0
     Author URI: http://www.drzgamer.com
     */
 ?>
 <?php 
+	// Register style sheet.
+	add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+	
+	/**
+	 * Register style sheet.
+	 */
+	function register_plugin_styles() {
+		wp_register_style( 'IGDB-shortcode-style', plugins_url() .'/igdb-wordpress/css/igdb-shortcode.css' );
+		wp_register_style( 'jqueryuicss', plugins_url() .'/igdb-wordpress/css/jquery-ui.min.css' );
+		wp_register_style( 'IGDBoptionscss', plugins_url() .'/igdb-wordpress/css/igdb-option.css' );
+		
+		
+	}
+
+
 	include( plugin_dir_path( __FILE__ ) . 'admin/igdb-shortcode.php');
 
     /**
@@ -131,7 +146,7 @@
     	wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-ui-core' );
 		wp_enqueue_script( 'jquery-ui-dialog' );
-		wp_enqueue_style( 'jqueryuicss', plugins_url() .'/igdb-wordpress/css/jquery-ui.min.css' );
+		wp_enqueue_style( 'jqueryuicss');
 		
     	include( plugin_dir_path( __FILE__ ) . 'admin/igdb-all-games.php');	
 
@@ -156,10 +171,10 @@
     	
     	wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-ui-core' );
-		wp_enqueue_style( 'jqueryuicss', plugins_url() .'/igdb-wordpress/css/jquery-ui.min.css' );
-		wp_enqueue_script( 'jquery-ui-tabs' );
+		wp_enqueue_style( 'jqueryuicss');
+		wp_enqueue_script( 'jquery-ui-tabs');
 		
-		wp_enqueue_style( 'IGDBoptionscss', plugins_url() .'/igdb-wordpress/css/igdb-option.css' );
+		wp_enqueue_style( 'IGDBoptionscss');
 
         
         include('igdb-wordpress-options.php');
@@ -497,6 +512,9 @@
 				curl_setopt($curl, CURLOPT_HTTPHEADER, array('X-Mashape-Authorization: '.get_option('igdb_API')));
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 				$response = json_decode(curl_exec ($curl), true);
+				
+				
+				date_default_timezone_set('Etc/GMT+0');
 				$date = date('Y-m-d', $release_date['date']/1000);
 
 				
@@ -515,7 +533,7 @@
 					$plattemp = $datum;
 					$wpdb->insert($releasedatetable,array('game' => $gameid, 'platform'=>$plattemp[0], 'region' => (array_key_exists('region',$release_date) ? $release_date['region'] : '8') , 'release_date' => $date));
 				}
-				
+				echo $date;
 			}
 		}
 			
