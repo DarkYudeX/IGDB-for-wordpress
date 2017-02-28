@@ -16,11 +16,11 @@ Display recent game information on your blog.
 
 Display game information like:
 
-*Game Boxart
+*Game Cover Art
 *Game Title
 *Release Date
 *Developers and Publishers
-*Platforms this game is avalaible on.
+*Platforms this game is available on.
 
 == Installation ==
 
